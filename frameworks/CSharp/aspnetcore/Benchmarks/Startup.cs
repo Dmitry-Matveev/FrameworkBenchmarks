@@ -53,6 +53,7 @@ namespace Benchmarks
             // Common DB services
             services.AddSingleton<IRandom, DefaultRandom>();
             services.AddEntityFrameworkSqlServer();
+            services.AddApplicationInsightsTelemetry("6a70388f-9193-463b-9117-4a88ba0e04c6");
 
             var appSettings = Configuration.Get<AppSettings>();
             Console.WriteLine($"Database: {appSettings.Database}");
